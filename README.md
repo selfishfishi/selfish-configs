@@ -17,3 +17,4 @@
 1. Install Go: https://go.dev/dl/
 # Editor
 1. Visual Studio Code: https://code.visualstudio.com/
+2. If you are Ali, livesync should be on. If not, install: https://marketplace.visualstudio.com/items?itemName=jeferwang.vscode-setting-export&utm_source=VSCode.pro&utm_campaign=AhmadAwais and import: https://github.com/selfishfishi/selfish-configs/blob/master/configs/vscode-setting-export.json
