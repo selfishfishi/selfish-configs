@@ -12,3 +12,8 @@
 10. Install Bat: https://github.com/sharkdp/bat#installation
 11. Install ctop: https://github.com/bcicen/ctop
 12. Install zsh syntax highlighting: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+
+# Language Support
+1. Install Go: https://go.dev/dl/
+# Editor
+1. Visual Studio Code: https://code.visualstudio.com/
