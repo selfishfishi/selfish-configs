@@ -67,3 +67,6 @@ Delete Surround: `ds[current_surround]
 Add single word Surrounce:: `ysaw[new_surround]`
 Surround a line: `yss[new_surround]
 Visual Model: Select + S[neew_surround]"
+
+## Autopilot
+See suggestions: `ctrl + enter`
