@@ -70,3 +70,8 @@ Visual Model: Select + S[neew_surround]"
 
 ## Autopilot
 See suggestions: `ctrl + enter`
+
+## Vim
+- `W` and `B` jump around boundries. Just like `w` and `b` but with boundries. Jumping boundries is way more useful than just words
+- `e` jump to the end of the word and `ge` jump to the end of the previous word.
+- `f{character}` jump to the next { character and `F{character} to the previous character`

@@ -105,6 +105,7 @@ export const a = 1;
 ```
 - We sometimes use => to define "arrow functions". They're like regular functions, but shorter. For example, x => x * 2 is roughly equivalent to function(x) { return x * 2; }. Importantly, arrow functions don't have their own this value so they're handy when you want to preserve the this value from an outer method definition.
 - by using x = {[name] : value } you are doing compound property name an
+- With arrow functions, the this keyword always represents the object that defined the arrow function. In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever
 
 ## React
 - Don’t put quotes around curly braces when embedding a JavaScript expression in an attribute. You should either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.
@@ -128,6 +129,7 @@ export const a = 1;
 - Props.children give you all the html components passed to a component
 - One such technique is the single responsibility principle, that is, a component should ideally only do one thing. If it ends up growing, it should be decomposed into smaller subcomponents.
 - Always start your react code with static components (hardcoded props) and then add dynamicis. Don't use state at all
+- Using memo will cause React to skip rendering a component if its props have not changed. `export default memo(Todos);` . If you do this in the component, it will not render again if the parent re-renders unless the subcomponent (todos) itself changes
 
 ## Hooks
 - They let you use state and other React features without writing a class. Hooks are functions that let you “hook into” React state and lifecycle features from function components.
@@ -140,6 +142,18 @@ export const a = 1;
 - Does useEffect run after every render? Yes! By default, it runs both after the first render and after every update.
 - So how does React know which state corresponds to which useState call? The answer is that React relies on the order in which Hooks are called
 - usually you’ll want to declare functions needed by an effect inside of it
+- When state is updated, the entire state gets overwritten. Because we need the current value of state, we pass a function into our setCar function. This function receives the previous value```
+  const updateColor = () => {
+    setCar(previousState => {
+      return { ...previousState, color: "blue" }
+    });
+  }
+```.
+- For effect hooks, the dependency `[]` runs only on the first render. Make sure you pass dependencies here
+- Use context to pass global variables like User or dependency injections without prop drilling
+- The useRef Hook allows you to persist values between renders. It is a state that doesn't get called at each render
+- The React useCallback Hook returns a memoized callback function.
+- The useCallback Hook only runs when one of its dependencies update. The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useCallback in the useCallback chapter.
 
 
 
