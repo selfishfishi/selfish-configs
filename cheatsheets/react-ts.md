@@ -156,5 +156,29 @@ export const a = 1;
 - The useCallback Hook only runs when one of its dependencies update. The useMemo and useCallback Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useCallback in the useCallback chapter.
 
 
-
-
+## CSS
+- Select for class with `.` for children with `<space>` for id with `#` , state with `:`
+- You can also style a state `a:hover` or `a:visited`
+- You can also use simple functions in CSS: `width: calc(90%-30px) //90% of the parent box minus 30px`. `transform` property also takes functions
+- `@` is called a rule and instructs CSS how it should perform. e.g: `@media (min-width: 30em)`
+- CSS provides five special universal property values for controlling inheritance. Every CSS property accepts these values: 
+	- `inherit`: CSS provides five special universal property values for controlling inheritance. Every CSS property accepts these values.
+	- `initial`: Initial value
+	- `revert`: Default provided by the browser
+	- `revert-layer`: default provided by the layer above
+- Attribute selectors gives you different ways to select elements based on the presence of a certain attribute on an element: `a[href="https://example.com"]
+- It also includes pseudo-elements, which select a certain part of an element rather than the element itself. `p::first-line`
+- The final group of selectors combine other selectors in order to target elements within our documents. `article > p` 
+- The adjacent sibling selector (+) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector. For example, to select all <img> elements that are immediately preceded by a <p> element: `p + img`
+- if you want to select siblings of an element even if they are not directly adjacent, then you can use the general sibling combinator (~). To select all <img> elements that come anywhere after <p> elements, we'd do this:
+-  Changing the value of the display property can change whether the outer display type of a box is block or inline. This changes the way it displays alongside other elements in the layout.
+- If a box has an outer display type of block, then: The box will break onto a new line. The width and height properties are respected. Padding, margin and border will cause other elements to be pushed away from the box. The box will extend in the inline direction to fill the space available in its container. In most cases, the box will become as wide as its container, filling up 100% of the space available.
+- If a box has an outer display type of inline, then: The box will not break onto a new line. The width and height properties will not apply. Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box. Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
+- In the alternative box model, any width is the width of the visible box on the page. The content area width is that width minus the width for the padding and border (see image below). No need to add up the border and padding to get the real size of the `box-sizing: border-box`
+- display: inline-block is a special value of display, which provides a middle ground between inline and block. Use it if you do not want an item to break onto a new line, but do want it to respect width and height and avoid the overlapping seen above. It does not, however, break onto a new line, and will only become larger than its content if you explicitly add width and height properties.
+- To crop content when it overflows, you can set overflow: hidden. To scroll: `overflow: scroll`
+- When you use margin and padding set in percentages, the value is calculated from the inline size of the containing block — therefore the width when working in a horizontal language. 
+- As we learned in our previous lesson, a common technique is to make the max-width of an image 100%. This will enable the image to become smaller in size than the box but not larger.
+- The object-fit property can help you here. When using object-fit the replaced element can be sized to fit a box in a variety of ways.
+- Just keep in mind that replaced elements, when they become part of a grid or flex layout, have different default behaviors, essentially to avoid them being stretched strangely by the layout.
+- Custom properties (sometimes referred to as CSS variables or cascading variables) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using custom property notation (e.g., --main-color: black;) and are accessed using the var() function (e.g., color: var(--main-color);).

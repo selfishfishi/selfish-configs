@@ -23,7 +23,7 @@ View Problem: `F8`
 ## Navigation
 Breadcrumbs: `ctrl+b`
 Go to Symp: `cmd+p` then `@`
-Go back/forward: `ctrl+a + []`
+Go back/morward: `ctrl+a + []`
 Go to definition: `ctrl+a + d` or `gd`
 Go to implementation: `ctrl+a i`
 Go to last edit location: `ctrl+a .`
