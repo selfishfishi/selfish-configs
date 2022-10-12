@@ -182,3 +182,31 @@ export const a = 1;
 - The object-fit property can help you here. When using object-fit the replaced element can be sized to fit a box in a variety of ways.
 - Just keep in mind that replaced elements, when they become part of a grid or flex layout, have different default behaviors, essentially to avoid them being stretched strangely by the layout.
 - Custom properties (sometimes referred to as CSS variables or cascading variables) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using custom property notation (e.g., --main-color: black;) and are accessed using the var() function (e.g., color: var(--main-color);).
+
+## CSS - Layout
+- Important properties: `display: `block|inline|inline-block|grid|flex|table`. `float`: causes wrapping of elements around the element. `position` placement of boxes inside other boxes. 
+- Flexbox is a one dimensional layout either in a row or column. You apply flex to the display property of the parent. 
+- Grid layout is two dimensional. 
+- Positioning: `static` is the default. `relative` moves the element relative to it's default. `absloute` moves it out of the normal flow and positions it relative to its ancestor. `Fixed` like absloute but fixes is relative to the viewport. `sticky` makes the position like `relative` until it hits a fixed point. 
+- you can use a display value of inline-flex if you wish to lay out an element's children as flex items, but have that element behave like an inline elemen
+- A number value for `flex` tells it propotional to other items in the row, what propotion of size the item should occupy
+- In grids: `grid-column: 1/ 3` or `grid-row: 1` let you specify the start and end lines at once, separated by a forward slash `/`. Alternatively you can use `grid-tempalte-areas` and name your areas:
+```
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+  grid-template-columns: 1fr 3fr;
+}
+
+header {
+  grid-area: header;
+}
+
+article {
+  grid-area: content;
+}
+```
+- a floated element is taken out of normal flow and the boxes of the following items actually run behind the float
+- Responsive Images, using the <picture> element and the <img> srcset and sizes attributes solve both of these problems. You can provide multiple sizes along with "hints" (metadata that describes the screen size and resolution the image is best suited for), and the browser will choose the most appropriate image for each device, ensuring that a user will download an image size appropriate for the device they are using
