@@ -1,0 +1,26 @@
+- `git reflog [--relative-date|-all]`: show history of all things you did in this git repo
+- `git revert [hash/head/number]`: make a new commit that undoes the changes that were made
+- `git reset <file>`: unstage files
+- `git clean --dry-run | -f`: removes non tracked files that are not in git;. Common use case is for artifacts.
+- `git diff`: shows diff of all relative to HEAD `git diff --cached` shows the diff of staged
+- `git reset <commit>` reset staging area to match commit but leaves the working directory alone. `--hard` option rewrites the working directory as well
+- `tig` blame: show file with blame files
+- `git checkout -- <filename>`: replaces the local changes
+- `git checkout <hash>`: loads versions of the file in that hash. This will get you into the detached head version and your commits will go on top of head
+- Checking out a specific commit will put the repo in a "detached HEAD" state. This means you are no longer working on any branch. In a detached state, any new commits you make will be orphaned when you change branches back to an established branch. Orphaned commits are up for deletion by Git's garbage collector. The garbage collector runs on a configured interval and permanently destroys orphaned commits. To prevent orphaned commits from being garbage collected, we need to ensure we are on a branch
+- The safe method for undoing is revert
+- Use git checkout to move around and review the commit history
+- git revert is the best tool for undoing shared public changes
+- git reset is best used for undoing local private changes
+- When fully executed, git clean will make a hard filesystem deletion, similar to executing the command line rm utility. Make sure you really want to delete the untracked files before you run it.
+- reset default operating mode is --mixed. The ref pointers are updated. The Staging Index is reset to the state of the specified commit. Any changes that have been undone from the Staging Index are moved to the Working Directory
+the 
+-When the --soft argument is passed, the ref pointers are updated and the reset stops there. The Staging Index and the Working Directory are left untouched. This behavior can be hard to clearly demonstrate
+- git rm combines the effect of g add and rm
+- rebase: `r` will stop rebase so you can rewrite commit message. Squad will be paused on and you will promoted to edit a separate message into a combined message. `f` will fixup to the previous commit message instead of being prompted
+- Basic `git rebase <base>` takes your commit from the current branch you are on and puts them on top of <base>. 
+You can also do git rebase --onto <newBase> <oldBasE> <current-branch|nothing> . This will replace oldBase with newBase for current-branch to be rabsed on top of.
+- `git stash pop` applies the previously applied stashes. `git stash apply` applies what is stashed but keeps it in stash. Adding the -u option (or --include-untracked) tells git stash to also stash your untracked files: or stash -a for everyvething 
+- git stash save "message" allows you to add a message to your stash in case you have multiple
+- $ git stash pop stash@{2}. Allows you to select one of your stashes.
+- git stash branch creates a new branch to apply your stashes to

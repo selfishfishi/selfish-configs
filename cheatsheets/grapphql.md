@@ -1,0 +1,3 @@
+- String! means that the field is non-nullable, meaning that the GraphQL service promises to always give you a value when you query this field. In the type language, we'll represent those with an exclamation mark.
+- For relay and general universal identification to work we need to make sure that the server provides an interface called Node with exactly one field called id that is non nullable and ID should be a globally unique identifier. If a quer returns an object taht implements node, then . Consistent object IDs enables caching and object look ups. 
+	- In other words the root query object should allow fetching any object via a node interface. 
