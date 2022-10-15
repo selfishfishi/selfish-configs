@@ -12,6 +12,7 @@ Toggle Left Side Bar: `cmd+b`
 Toggle Right Side Bar: `cmd+l`
 Next/Prev Panel View: `cmd+a m|n`
 Next/Prev siebar View: `cmd+a '|;`
+show terminal: `cmd+a t`
 
 
 ## Editing
